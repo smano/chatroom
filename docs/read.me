@@ -1,0 +1,23 @@
+INSTALLATION on Linux (Amazon linux or Redhat based linux distributions)
+
+# install node.js and npm
+1. yum install nodejs npm --enablerepo=epel
+   yum install -y php55-mysqlnd php55 php55-xml php55-mcrypt php55-mbstring php55-cli mysql55 mysql55-server httpd24
+
+# install git if not installed
+2. yum install git
+
+# clone the chat application
+3. git clone https://github.com/smano/chatroom.git
+
+# Now Go to chat directory that you have just cloned through git
+# Perform following steps when your current directory is "chatroom"
+
+# Install PM2 (production process manager)
+4. npm install pm2 -g
+
+# Update Database Parameters in "process.php" file
+6. nano process.php
+
+# start server at port 80
+7. PORT=80 pm2 start server.js
